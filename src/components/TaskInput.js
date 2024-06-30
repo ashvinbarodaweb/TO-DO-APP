@@ -13,7 +13,7 @@ const TaskInput = () => {
     if (text.trim()) {
       dispatch(addTask({ id: Date.now(), text, priority }));
       setText('');
-      setPriority('Low'); // Reset priority state after adding task
+      setPriority(''); // Reset priority state after adding task
     }
   };
 
@@ -21,7 +21,7 @@ const TaskInput = () => {
     <Container className="my-3">
       <Form>
         <Row className="mb-3 d-flex align-items-center">
-          <Col lg={7}>
+          <Col lg={8}>
             <Form.Control
               as="textarea"
               className='mb-3'
